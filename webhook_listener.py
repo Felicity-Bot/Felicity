@@ -13,7 +13,7 @@ class WebhookHandler(BaseHTTPRequestHandler):
             # You can add validation of the payload here if needed
 
             # Execute the deploy script
-            process = subprocess.Popen(['deploy.sh'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+            process = subprocess.Popen(['/home/misfit/projects/Felicity/deploy.sh'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 
             # Capture the output and print it to the terminal
             for line in process.stdout:
