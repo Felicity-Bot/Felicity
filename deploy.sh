@@ -1,3 +1,5 @@
+#!/bin/bash
+
 sudo apt update
 chmod +x gradlew
 ./gradlew build
