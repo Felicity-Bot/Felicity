@@ -1,5 +1,9 @@
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+
 plugins {
     kotlin("jvm") version "1.9.22"
+    id("com.github.johnrengelman.shadow") version "7.1.2" // Add the Shadow plugin
+
 }
 
 group = "xyz.stellar"
@@ -34,10 +38,21 @@ kotlin {
     jvmToolchain(17)
 }
 
-tasks.jar {
-    manifest {
-        attributes(
-            "Main-Class" to "xyz.stellar.felicity.MainKt"
-        )
+tasks {
+    jar {
+        manifest {
+            attributes(
+                "Main-Class" to "xyz.stellar.felicity.MainKt"
+            )
+        }
     }
+
+    withType<ShadowJar> {
+        archiveClassifier.set("")
+        mergeServiceFiles()
+    }
+}
+
+tasks.build {
+    dependsOn(tasks.shadowJar)
 }
