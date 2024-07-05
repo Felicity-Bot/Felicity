@@ -17,7 +17,7 @@ suspend fun main() {
         extensions {
             scannedExtensions.forEach {
                 add { it }
-                println("Loaded extension: ${it.name}")
+                println("Loaded extensionn: ${it.name}")
             }
         }
     }
