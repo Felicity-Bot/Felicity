@@ -4,7 +4,7 @@ import com.mongodb.kotlin.client.coroutine.MongoClient
 import xyz.stellar.felicity.db.model.ServerSettings
 
 object MongoDB {
-    val client = MongoClient.create("mongodb://localhost:27017")
+    val client = MongoClient.create("mongodb://192.168.1.85:27017")
     val database = client.getDatabase("felicity")
 
     // collections
