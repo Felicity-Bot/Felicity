@@ -33,3 +33,11 @@ dependencies {
 kotlin {
     jvmToolchain(17)
 }
+
+tasks.jar {
+    manifest {
+        attributes(
+            "Main-Class" to "xyz.stellar.felicity.MainKt"
+        )
+    }
+}
