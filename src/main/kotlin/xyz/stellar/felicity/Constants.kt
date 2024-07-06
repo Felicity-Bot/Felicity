@@ -1,3 +1,7 @@
 package xyz.stellar.felicity
 
-val TOKEN = "MTI1Nzc2MjUxNDAyNDkyNzQxNA.G0VF5O.sN9B1XvsDGAb04tbOisXuh5wVTt0u-EbGHe15Y"
+import io.github.cdimascio.dotenv.Dotenv
+
+val dotenv = Dotenv.configure().load()
+
+val TOKEN = dotenv["TOKEN"]

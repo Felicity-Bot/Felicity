@@ -32,6 +32,7 @@ dependencies {
     implementation("io.github.oshai:kotlin-logging:6.0.3")
     implementation("ch.qos.logback:logback-classic:1.5.0")
     implementation("org.mongodb:mongodb-driver-kotlin-coroutine:5.1.0")
+    implementation("io.github.cdimascio:dotenv-kotlin:6.4.1")
 }
 
 kotlin {
